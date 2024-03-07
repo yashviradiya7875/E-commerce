@@ -3,7 +3,7 @@ import { Link, NavLink } from 'react-router-dom'
 
 function Header() {
 
-  const [isLogdin, setIsLogdin] = useState(false)
+  const [isLogdin, setIsLogdin] = useState()
 
   const menu = [
     {
@@ -25,7 +25,7 @@ function Header() {
   return (
     <>
       <header className="text-slate-700 container z-10 mx-auto flex flex-col overflow-hidden px-4 py-4 lg:flex-row lg:items-center border-b-2">
-        <Link to="/home" className="flex mr-20 ml-4 items-center whitespace-nowrap text-2xl font-black">
+        <Link to="/" className="flex mr-20 ml-4 items-center whitespace-nowrap text-2xl font-black">
           Smart Cart
         </Link>
         <input type="checkbox" className="peer hidden" id="navbar-open" />
@@ -62,20 +62,20 @@ function Header() {
               !isLogdin ? <NavLink
                 to="/login"
                 title=""
-                className="whitespace-nowrap rounded font-medium transition-all duration-200 focus:outline-none focus:ring-1 focus:ring-blue-700 focus:ring-offset-2 hover:text-opacity-50">
+                className="whitespace-nowrap rounded font-medium hover:text-opacity-50">
                 Log in
               </NavLink> :
                 <NavLink
                   to="/"
                   title=""
-                  className="whitespace-nowrap rounded font-medium transition-all duration-200 focus:outline-none focus:ring-1 focus:ring-blue-700 focus:ring-offset-2 hover:text-opacity-50">
+                  className="whitespace-nowrap rounded font-medium hover:text-opacity-50">
                   Log out
                 </NavLink>
             }
             <NavLink
               to="/cart"
               title=""
-              className="whitespace-nowrap rounded-xl bg-blue-700 px-5 py-3 font-medium text-white transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:ring-offset-2 hover:bg-blue-600">Cart</NavLink>
+              className="whitespace-nowrap rounded-xl bg-blue-700 px-5 py-3 font-medium text-white hover:bg-blue-600">Cart</NavLink>
           </div>
         </nav>
       </header >

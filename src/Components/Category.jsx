@@ -1,17 +1,10 @@
-import React, { useState } from 'react'
+
 
 function Category() {
 
-    const [catagory, setCatagory] = useState()
 
-
-    const event = (e) => {
-        setCatagory(e.target.value)
-        console.log(catagory)
-
-    }
     return (
-        <div className="flex justify-center items-center">
+        <div className="flex mx-6 justify-center items-center">
             <div className="2xl:mx-auto 2xl:container py-12 px-4 sm:px-6 xl:px-20 2xl:px-0 w-full">
                 <div className="flex flex-col jusitfy-center items-center space-y-10">
                     <div className="flex flex-col justify-center items-center ">
@@ -22,8 +15,9 @@ function Category() {
                             <img className="object-center object-cover h-full w-full rounded-3xl" src="https://i.ibb.co/ThPFmzv/omid-armin-m-VSb6-PFk-VXw-unsplash-1-1.png" alt="girl-image" />
                             <button
                                 className="bottom-4 z-10 absolute text-base font-medium rounded-md text-white py-3 w-36 bg-blue-600"
-                                value="women"
-                                onClick={event}
+                                name="women"
+                                // value={catagory}
+                                
                             >Women</button>
                         </div>
 
