@@ -12,8 +12,9 @@ function Products() {
   useEffect(() => {
     ; (async () => {
       setIsloading(true)
-      const response = await axios.get("https://dummyjson.com/products")
+      const response = await axios.get("https://dummyjson.com/products?limit=100")
       setData(response.data.products)
+      // console.log(response.data.products);
       setIsloading(false)
     })()
   }, [])
@@ -37,6 +38,7 @@ function Products() {
               title={res.title}
               price={res.price}
               rating={res.rating}
+              discount={res.discountPercentage}
             />
           ))
         }

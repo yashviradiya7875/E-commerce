@@ -11,7 +11,7 @@ const Product = () => {
     (async () => {
       const response = await axios.get(`https://dummyjson.com/products/${id}`)
       setProduct(response.data)
-      console.log(response.data)
+      // console.log(response.data)
     })()
 
   }, [])

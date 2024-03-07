@@ -1,12 +1,12 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Home from "./Pages/Home"
-import About from './Pages/About'
-import Contact from './Pages/Contact'
-import Products from './Pages/Products'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Layout from './Components/Layout'
-import Product from './Pages/Product'
+import About from './Pages/About'
 import Cart from './Pages/Cart'
+import Home from "./Pages/Home"
 import Login from './Pages/Login'
+import Product from './Pages/Product'
+import Products from './Pages/Products'
+import SingUp from './Pages/SingUp'
 
 function App() {
   return (
@@ -14,13 +14,13 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Layout />}>
-          <Route path='home' element={<Home />} />
+          <Route index element={<Home />} />
           <Route path='about' element={<About />} />
-          <Route path='contact' element={<Contact />} />
           <Route path='products' element={<Products />} />
           <Route path='login' element={<Login />} />
           <Route path='cart' element={<Cart />} />
           <Route path="/products/:id" element={<Product />} />
+          <Route path='/singup' element={<SingUp />} />
         </Route>
       </Routes>
     </BrowserRouter>
