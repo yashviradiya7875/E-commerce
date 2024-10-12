@@ -45,6 +45,5 @@ export default function ImgMediaCard({ id, url, title, price, rating, discount }
                 </div>
             </div>
         </>
-
     );
 }
