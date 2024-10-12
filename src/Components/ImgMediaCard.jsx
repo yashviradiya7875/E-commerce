@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 export default function ImgMediaCard({ id, url, title, price, rating, discount }) {
 
 
-    const AddInCart = () => {
+    // const AddInCart = () => {
 
 
-    }
+    // }
 
 
 
